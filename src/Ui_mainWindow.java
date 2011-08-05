@@ -8,7 +8,7 @@
 import com.trolltech.qt.core.*;
 import com.trolltech.qt.gui.*;
 
-public class Ui_MainWindow implements com.trolltech.qt.QUiForm<QMainWindow>
+public class Ui_mainWindow implements com.trolltech.qt.QUiForm<QMainWindow>
 {
     public QWidget centralwidget;
     public QVBoxLayout verticalLayout;
@@ -21,13 +21,13 @@ public class Ui_MainWindow implements com.trolltech.qt.QUiForm<QMainWindow>
     public QMenuBar menubar;
     public QStatusBar statusbar;
 
-    public Ui_MainWindow() { super(); }
+    public Ui_mainWindow() { super(); }
 
-    public void setupUi(QMainWindow MainWindow)
+    public void setupUi(QMainWindow mainWindow)
     {
-        MainWindow.setObjectName("MainWindow");
-        MainWindow.resize(new QSize(631, 702).expandedTo(MainWindow.minimumSizeHint()));
-        centralwidget = new QWidget(MainWindow);
+        mainWindow.setObjectName("mainWindow");
+        mainWindow.resize(new QSize(389, 351).expandedTo(mainWindow.minimumSizeHint()));
+        centralwidget = new QWidget(mainWindow);
         centralwidget.setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout.setObjectName("verticalLayout");
@@ -62,24 +62,24 @@ public class Ui_MainWindow implements com.trolltech.qt.QUiForm<QMainWindow>
 
         verticalLayout.addWidget(PB_process);
 
-        MainWindow.setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
+        mainWindow.setCentralWidget(centralwidget);
+        menubar = new QMenuBar(mainWindow);
         menubar.setObjectName("menubar");
-        menubar.setGeometry(new QRect(0, 0, 631, 20));
-        MainWindow.setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
+        menubar.setGeometry(new QRect(0, 0, 389, 25));
+        mainWindow.setMenuBar(menubar);
+        statusbar = new QStatusBar(mainWindow);
         statusbar.setObjectName("statusbar");
-        MainWindow.setStatusBar(statusbar);
-        retranslateUi(MainWindow);
+        mainWindow.setStatusBar(statusbar);
+        retranslateUi(mainWindow);
 
-        MainWindow.connectSlotsByName();
+        mainWindow.connectSlotsByName();
     } // setupUi
 
-    void retranslateUi(QMainWindow MainWindow)
+    void retranslateUi(QMainWindow mainWindow)
     {
-        MainWindow.setWindowTitle(com.trolltech.qt.core.QCoreApplication.translate("MainWindow", "MainWindow", null));
-        label.setText(com.trolltech.qt.core.QCoreApplication.translate("MainWindow", "Regexp:", null));
-        PB_process.setText(com.trolltech.qt.core.QCoreApplication.translate("MainWindow", "Process", null));
+        mainWindow.setWindowTitle(com.trolltech.qt.core.QCoreApplication.translate("mainWindow", "QRegexp", null));
+        label.setText(com.trolltech.qt.core.QCoreApplication.translate("mainWindow", "Regexp:", null));
+        PB_process.setText(com.trolltech.qt.core.QCoreApplication.translate("mainWindow", "Process", null));
     } // retranslateUi
 
 }

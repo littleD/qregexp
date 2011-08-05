@@ -3,7 +3,7 @@ import com.trolltech.qt.gui.*;
 import com.trolltech.qt.sql.*;
 import java.util.regex.*;
 
-class MainWindow extends Ui_MainWindow {
+class MainWindow extends Ui_mainWindow {
 	void process() {
 		try {
 			Pattern wiersz_p = Pattern.compile(LE_regexp.text());
