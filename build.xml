@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project default="dist" name="RegexpViewer">
+<description>Projekt Bestiariusz na bazy danych. Dużo tekstu, fajnie się będzie czytać.</description>
+<property name="srcDir" location="src"/>
+<property name="buildDir" location="build"/>
+<property name="distDir" location="dist"/>
+<property name="qtjambiDir" location="/opt/qtjambi-linux32-community-4.7.0-beta/"/>
+
+<target name="init">
+<tstamp/>
+<mkdir dir="${buildDir}"/>
+<mkdir dir="${distDir}"/>
+</target>
+
+<target name="compile" depends="init">
+<javac srcdir="${srcDir}" classpath="${qtjambiDir}/qtjambi-4.7.0.jar:${qtjambiDir}/qtjambi-linux32-gcc-4.7.0.jar:.
+" destdir="${buildDir}"/>
+</target>
+
+<target name="dist" depends="compile">
+<jar destfile="${distDir}/rv-${DSTAMP}.jar" basedir="${buildDir}">
+<manifest>
+<attribute name="Built-By" value="${user.name}"/>
+<attribute name="Class-Path" value="${qtjambiDir}/qtjambi-4.7.0.jar ${qtjambiDir}/qtjambi-linux32-gcc-4.7.0.jar"/>
+<attribute name="Main-Class" value="RegexpViewer"/>
+</manifest>
+</jar>
+<jar destfile="${distDir}/rv-src-${DSTAMP}.jar" basedir="${srcDir}"/>
+</target>
+
+<target name="clean">
+<delete dir="${buildDir}"/>
+<delete dir="${distDir}"/>
+</target>
+</project>
